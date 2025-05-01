@@ -1,0 +1,300 @@
+---
+title: "Online Retail Exploratory Data Analysis"
+author: "Charles Aniji"
+date: "2025-04-01"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+editor_options: 
+  chunk_output_type: inline
+---
+
+## 1. Setup
+
+We’ll use **data.table** for speed on ~500 K rows, plus **dplyr**, **lubridate**, and **arules** for analysis.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(data.table)
+library(dplyr)
+library(lubridate)
+library(arules)
+library(tidyverse)
+```  
+
+## 2. Load Data
+
+Read the cleaned CSV into a `data.table`.
+
+```{r}
+online_retail <- fread("C:/Users/ADM1N/Desktop/UK_Retail_Analytics/online_retail_cleaned.csv", header = TRUE, fill = Inf)
+```  
+
+## 3. Inspect Data
+
+### 3.1 Dimensions
+
+```{r}
+dim(online_retail)
+```  
+
+### 3.2 Preview
+
+```{r}
+head(online_retail, 10)
+```  
+
+### 3.3 Structure
+
+```{r}
+str(online_retail)
+```  
+
+
+## 4. Prepare Date Fields
+
+Convert `InvoiceYearMonth` string to a Date object for grouping.
+
+
+```{r echo=FALSE}
+online_retail$InvoiceYearMonth <- ym(online_retail$InvoiceYearMonth)
+```  
+
+
+## 5. Summary Statistics
+
+Compute mean, min, max, and standard deviation for **Quantity**, **UnitPrice**, and **TotalSpent**.
+
+
+```{r summary}
+summary_stats <- online_retail %>% 
+  summarise(
+    Mean_Quantity    = mean(Quantity,    na.rm = TRUE),
+    Min_Quantity     = min(Quantity,     na.rm = TRUE),
+    Max_Quantity     = max(Quantity,     na.rm = TRUE),
+    SD_Quantity      = sd(Quantity,      na.rm = TRUE),
+    Mean_UnitPrice   = mean(UnitPrice,   na.rm = TRUE),
+    Min_UnitPrice    = min(UnitPrice,    na.rm = TRUE),
+    Max_UnitPrice    = max(UnitPrice,    na.rm = TRUE),
+    SD_UnitPrice     = sd(UnitPrice,     na.rm = TRUE),
+    Mean_TotalSpend  = mean(TotalSpent,  na.rm = TRUE),
+    Min_TotalSpend   = min(TotalSpent,   na.rm = TRUE),
+    Max_TotalSpend   = max(TotalSpent,   na.rm = TRUE),
+    SD_TotalSpend    = sd(TotalSpent,    na.rm = TRUE)
+  ) %>% 
+  round(2)
+
+print(summary_stats)
+```  
+
+
+## 6. Top Products
+
+### 6.1 By Sales Volume
+
+
+```{r}
+top_products_volume <- online_retail %>%
+  group_by(Description) %>%
+  summarise(Total_Units_Sold = sum(Quantity, na.rm = TRUE)) %>%
+  arrange(desc(Total_Units_Sold)) %>%
+  slice_max(n = 10, Total_Units_Sold)
+
+print(top_products_volume)
+```  
+
+
+### 6.2 By Revenue
+
+
+```{r}
+top_products_revenue <- online_retail %>%
+  group_by(Description) %>%
+  summarise(Total_Revenue = sum(TotalSpent, na.rm = TRUE)) %>%
+  arrange(desc(Total_Revenue)) %>%
+  slice_max(n = 10, Total_Revenue)
+
+print(top_products_revenue)
+```  
+
+
+## 7. Repeat Purchase Rate
+
+Calculate the percentage of customers with more than one distinct order.
+
+
+```{r}
+repeat_customers <- online_retail %>%
+  group_by(CustomerID) %>%
+  summarise(OrderCount = n_distinct(InvoiceNo)) %>%
+  summarise(
+    RepeatCustomers = sum(OrderCount > 1),
+    TotalCustomers  = n(),
+    RepeatRate      = round(100 * RepeatCustomers / TotalCustomers, 1)
+  )
+
+print(
+  glue::glue(
+    "Repeat purchase rate: {repeat_customers$RepeatRate}%"
+  )
+)
+```  
+
+
+## 8. Monthly Sales Trend
+
+### 8.1 Aggregate Revenue by Month
+
+
+```{r}
+monthly_sales <- online_retail %>%
+  group_by(InvoiceYearMonth) %>%
+  summarise(Total_Revenue = sum(TotalSpent, na.rm = TRUE)) %>%
+  arrange(InvoiceYearMonth)
+
+print(monthly_sales)
+```  
+
+
+### 8.2 Identify Peak Month
+
+
+```{r}
+peak_month <- monthly_sales %>%
+  filter(Total_Revenue == max(Total_Revenue)) %>%
+  pull(InvoiceYearMonth)
+
+print(glue::glue("Highest-revenue month: {peak_month}"))
+```  
+
+
+### 8.3 Top 3 Products in Peak Month
+
+
+```{r}
+top_peak_products <- online_retail %>%
+  filter(InvoiceYearMonth == peak_month) %>%
+  group_by(Description) %>%
+  summarise(Monthly_Revenue = sum(TotalSpent, na.rm = TRUE)) %>%
+  arrange(desc(Monthly_Revenue)) %>%
+  slice_max(n = 3, Monthly_Revenue)
+
+print(top_peak_products)
+```  
+
+
+## 9. Market Basket Analysis
+
+### 9.1 Prepare Transactions
+
+
+```{r}
+transactions_list <- split(online_retail$Description, online_retail$InvoiceNo)
+transactions      <- as(transactions_list, "transactions")
+```  
+
+
+### 9.2 Run Apriori & Filter
+
+
+```{r}
+basket_rules <- apriori(
+  transactions,
+  parameter = list(supp = 0.014, conf = 0.77)
+)
+
+filtered_rules <- subset(basket_rules, lift > 1.5)
+filtered_rules <- sort(filtered_rules, by = c("lift", "confidence"), decreasing = TRUE)
+
+inspect(head(filtered_rules, 5))
+```  
+
+
+### 9.3 Convert Rules to a Data Frame
+
+
+```{r}
+rules_df <- as(filtered_rules, "data.frame")
+head(rules_df)
+```
+
+
+### 9.4 Split Into LHS and RHS
+
+
+```{r}
+rules_df <- rules_df %>%
+  separate(
+    col    = rules,
+    into   = c("lhs", "rhs"),
+    sep    = "=>",
+    remove = FALSE
+  ) %>%
+  mutate(
+    lhs = str_remove_all(lhs, "[\\{\\}]") %>% trimws(),
+    rhs = str_remove_all(rhs, "[\\{\\}]") %>% trimws()
+  )
+
+head(rules_df)
+```
+
+
+## 10. RFM Segmentation
+
+### 10.1 Compute RFM Metrics
+
+
+```{r}
+reference_date <- max(online_retail$InvoiceDate)
+
+rfm_data <- online_retail %>%
+  group_by(CustomerID) %>%
+  summarise(
+    Recency   = as.numeric(reference_date - max(InvoiceDate)),
+    Frequency = n_distinct(InvoiceNo),
+    Monetary  = sum(TotalSpent, na.rm = TRUE)
+  )
+```  
+
+
+### 10.2 Score & Segment
+
+
+```{r}
+rfm_scored <- rfm_data %>%
+  mutate(
+    R_Score   = ntile(-Recency, 5),
+    F_Score   = ntile(Frequency, 5),
+    M_Score   = ntile(Monetary, 5),
+    RFM_Group = case_when(
+      R_Score >= 4 & F_Score >= 4 & M_Score >= 4 ~ "Champions",
+      R_Score >= 3 & F_Score >= 3 & M_Score >= 3 ~ "Loyal Customers",
+      R_Score >= 4 & F_Score <= 2 & M_Score <= 2 ~ "Recent Buyers",
+      R_Score <= 2 & F_Score >= 4 & M_Score >= 4 ~ "At Risk Customers",
+      R_Score <= 2 & F_Score <= 2 & M_Score <= 2 ~ "Lost Customers",
+      TRUE                                      ~ "Others"
+    )
+  )
+
+rfm_summary <- rfm_scored %>%
+  group_by(RFM_Group) %>%
+  summarise(
+    Avg_Recency   = mean(Recency),
+    Avg_Frequency = mean(Frequency),
+    Avg_Monetary  = mean(Monetary),
+    Customer_Count = n()
+  )
+
+print(rfm_summary)
+```  
+
+
+## 11. Export for Tableau
+### Save the RFM summary and rules for dashboarding
+
+```{r}
+fwrite(rfm_summary, "C:/Users/ADM1N/Desktop/UK_Retail_Analytics/rfm_summary.csv")
+fwrite(rules_df, "C:/Users/ADM1N/Desktop/UK_Retail_Analytics/filtered_rules.csv")
+fwrite(online_retail, "C:/Users/ADM1N/Desktop/UK_Retail_Analytics/online_retail_viz_ready.csv")
+```  
