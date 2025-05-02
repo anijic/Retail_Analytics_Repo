@@ -59,7 +59,7 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Volume%20vs.%20Revenue.png)
 
 ### **5. RFM Scatter Plot**
-- Segments customers into 6 groups (e.g., Champions, At Risk) using **Recency, Frequency, Monetary** scores.
+- Segments customers into 6 groups (e.g., Champions, At Risk) using **Recency, Frequency, and Monetary** scores.
   
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/RFM%20Segments.png)
 
