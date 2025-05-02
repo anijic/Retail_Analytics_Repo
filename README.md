@@ -119,6 +119,6 @@ This project demonstrates how combining product affinity analysis with customer 
 ---
 
 ## **References**  
-- UCI Machine Learning Repository – Online Retail Dataset (linked [here](https://archive.ics.uci.edu/dataset/352/online+retail))  
+- UCI Machine Learning Repository – 'Online Retail' Dataset (linked [here](https://archive.ics.uci.edu/dataset/352/online+retail))  
 - Association Rules via `arules` R package  
 - RFM segmentation framework adapted from industry best practices
