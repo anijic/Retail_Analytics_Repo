@@ -107,21 +107,18 @@ This project demonstrates how combining product affinity analysis with customer 
 
 ## **Replication Instructions**  
 - To reproduce the project:
-
 ### SQL (MySQL Workbench)
-- Run `01_import_data.sql` to set up the database, create base table, and bulk-load the raw .csv file.  
-- `02_clean_data.sql` to  Clean and standardize the imported data.
-- `03_finalize_and_export.sql` to export the cleaned dataset.
-
+- Run `01_import_data.sql` to set up the database, create base table, and bulk-load the raw .csv file  
+- Run `02_clean_data.sql` to  Clean and standardize the imported data.
+- Run `03_finalize_and_export.sql` to export the cleaned dataset.
 ### R (RStudio)
 - Run `EDA & Advanced Analysis.Rmd` to perform EDA, Market Basket Analysis, and RFM segmentation.
-
 ### Tableau
-- Open `UK_Retail_Dashboard.twbx` and connect to `online_retail_viz_ready.csv`.
+- Open `Retail Analytics_ Product Bundling & Retention Dashboard.twbx` and connect to `online_retail_viz_ready.csv`, `rfm_summary.csv` and filtered_rules.csv.
 
 ---
 
 ## **References**  
-- UCI Machine Learning Repository – Online Retail Dataset  
+- UCI Machine Learning Repository – Online Retail Dataset (linked [here](https://archive.ics.uci.edu/dataset/352/online+retail))  
 - Association Rules via `arules` R package  
 - RFM segmentation framework adapted from industry best practices
