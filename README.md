@@ -1,6 +1,6 @@
 # Retail Analytics: Product Bundling & Retention
 
-- Analyzing 500K+ Transactions via RFM & Market Basket Analysis to Drive Revenue Growth through Bundling & Retention Using SQL, R, and Tableau.
+- Analyzing over 500K Transactions via RFM & Market Basket Analysis to Drive Revenue Growth through Bundling & Retention Using SQL, R, and Tableau.
 
 ## **Dashboard Summary**  
 - Interactive Tableau dashboard (linked [here](https://public.tableau.com/views/RetailAnalyticsProductBundlingRetentionDashboard/RetailAnalyticsProductBundlingRetention?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  unifies key metrics, filters by RFM segments, bundles, and country.
@@ -106,14 +106,14 @@ This project demonstrates how combining product affinity analysis with customer 
 ---
 
 ## **Replication Instructions**  
-- To reproduce the project:
-### SQL (MySQL Workbench)
+- To reproduce this project:
+#### SQL (MySQL Workbench)
 - Run `01_import_data.sql` to set up the database, create base table, and bulk-load the raw .csv file  
 - Run `02_clean_data.sql` to  Clean and standardize the imported data.
 - Run `03_finalize_and_export.sql` to export the cleaned dataset.
-### R (RStudio)
+#### R (RStudio)
 - Run `EDA & Advanced Analysis.Rmd` to perform EDA, Market Basket Analysis, and RFM segmentation.
-### Tableau
+#### Tableau
 - Open `Retail Analytics_ Product Bundling & Retention Dashboard.twbx` and connect to `online_retail_viz_ready.csv`, `rfm_summary.csv` and filtered_rules.csv.
 
 ---
