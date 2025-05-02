@@ -106,7 +106,6 @@ This project demonstrates how combining product affinity analysis with customer 
 ---
 
 ## **Replication Instructions**  
-- To reproduce this project:
 #### SQL (MySQL Workbench)
 - Run `01_import_data.sql` to set up the database, create base table, and bulk-load the raw .csv file  
 - Run `02_clean_data.sql` to  Clean and standardize the imported data.
