@@ -13,25 +13,25 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 ---
 
 ## **Tools & Technologies**  
-- **SQL (MySQL Workbench)** – for data cleaning and preparation  
-- **R (RStudio)** – for EDA, Market Basket Analysis, RFM segmentation  
-- **Tableau Desktop** – for building business dashboards  
-- **GitHub** – for documentation and version control  
+- **SQL (MySQL Workbench)** : for data cleaning and preparation  
+- **R (RStudio)** : for EDA, Market Basket Analysis, and RFM segmentation  
+- **Tableau Desktop** : for building business dashboards  
+- **GitHub** : for documentation and version control  
 
 ---
 
 ## **Data Overview**  
 - Cleaned over **540K raw records** from a retail dataset  
-- Removed cancelled orders, null values, outliers, duplicates  
+- Removed cancelled orders, rows with missing critical fields, outliers, and duplicates  
 - Created additional fields: `InvoiceYearMonth`, `TotalSpent`, `RFM Group`, and `ProductBundle`  
 
 ---
 
 ## **Methodology**  
-1. Cleaned data in SQL and exported as CSV  
+1. Cleaned data in SQL and exported as .csv file  
 2. Performed EDA and advanced analytics in R (Market Basket + RFM)  
 3. Prepared output files for Tableau  
-4. Designed and exported final visualizations to Tableau public  
+4. Designed and exported final visualizations and dashboard to Tableau public  
 5. Developed insights, business recommendations, and strategic actions  
 
 ---
@@ -41,32 +41,32 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 ### **1. Monthly Revenue Trend**
 - November 2011 recorded **£1.05M**, a 75% increase vs. monthly average, ideal for **seasonal promotions**.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Monthly%20Revenue%20Trend.png).
+![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Monthly%20Revenue%20Trend.png)
 
 ### **2. Product Bundles (Top 5)**
 - Horizontal bar chart highlighting bundles like *Poppy’s Playhouse* and *Regency Teacup Sets* that outperform standalone products.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Product%20Bundles.png).
+![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Product%20Bundles.png)
 
 ### **3. Regional Bundle Sales**
 - Shows bundle performance by country, *UK* dominates volume and revenue, while *Germany* and *Netherlands* show niche interest.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Regional%20Bundle%20Sales.png).
+![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Regional%20Bundle%20Sales.png)
 
 ### **4. Volume vs. Revenue**
 - Items like *World War 2 Gliders* lead in volume but not revenue. *Regency Cakestand* leads revenue despite moderate volume, supports value-based bundling.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Volume%20vs.%20Revenue.png).
+![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Volume%20vs.%20Revenue.png)
 
 ### **5. RFM Scatter Plot**
 - Segments customers into 6 groups (e.g., Champions, At Risk) using **Recency, Frequency, Monetary** scores.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/RFM%20Segments.png).
+![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/RFM%20Segments.png)
 
 ### **6. Top 3 Products in Peak Month**
 - Horizontal bar chart showing best-sellers for November: *Rabbit Night Light*, *Paper Chain Kit*, and *Regency Cakestand*.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Sheet%20Top%203%20Peak%20Month%20Products.png).
+![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Sheet%20Top%203%20Peak%20Month%20Products.png)
 
 ---
 
@@ -100,28 +100,24 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 
 ---
 
-## Replication Instructions  
-To reproduce the project:
-
-### SQL (MySQL Workbench)
-- Run `retail_cleaning_script.sql` to clean and structure the raw dataset.
-
-### R (RStudio)
-- Run `online_retail_eda.R` to perform EDA, Market Basket Analysis, and RFM segmentation.
-
-### Tableau
-- Open `UK_Retail_Dashboard.twbx` and connect to `online_retail_viz_ready.csv`.
-
----
-
 ## **Conclusion**  
 This project demonstrates how combining product affinity analysis with customer segmentation enables **targeted pricing strategies, bundling, and retention** efforts. Visual insights and business logic directly support the retailer’s goal to grow revenue.
 
 ---
 
-## 🔗 Links  
-- ** Tableau Dashboard**: [View on Tableau Public](#)  
-- ** GitHub Repository**: [Retail-Analytics-Bundling](#) *(repo structure below)*
+## **Replication Instructions**  
+- To reproduce the project:
+
+### SQL (MySQL Workbench)
+- Run `01_import_data.sql` to set up the database, create base table, and bulk-load the raw .csv file.  
+- `02_clean_data.sql` to  Clean and standardize the imported data.
+- `03_finalize_and_export.sql` to export the cleaned dataset.
+
+### R (RStudio)
+- Run `EDA & Advanced Analysis.Rmd` to perform EDA, Market Basket Analysis, and RFM segmentation.
+
+### Tableau
+- Open `UK_Retail_Dashboard.twbx` and connect to `online_retail_viz_ready.csv`.
 
 ---
 
