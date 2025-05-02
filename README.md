@@ -1,6 +1,9 @@
 # Retail Analytics: Product Bundling & Retention
 
-- Analyzing 500K+ Transactions via RFM & Market Basket Analysis to Drive Revenue Growth through Bundling & Retention Using SQL, R, and Tableau. (View the Tableau dashboard [here](https://public.tableau.com/views/RetailAnalyticsProductBundlingRetentionDashboard/RetailAnalyticsProductBundlingRetention?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
+- Analyzing 500K+ Transactions via RFM & Market Basket Analysis to Drive Revenue Growth through Bundling & Retention Using SQL, R, and Tableau.
+
+## **Dashboard Summary**  
+- Interactive Tableau dashboard (linked [here](https://public.tableau.com/views/RetailAnalyticsProductBundlingRetentionDashboard/RetailAnalyticsProductBundlingRetention?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  unifies key metrics, filters by RFM segments, bundles, and country.
 
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Retail%20Analytics_%20Product%20Bundling%20%26%20Retention.png)
 
@@ -36,7 +39,7 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 ## **Key Visualizations & Insights**
 
 ### **1. Monthly Revenue Trend**
-- November 2011 recorded **£1.05M**, a 75% increase vs. monthly average—ideal for **seasonal promotions**.
+- November 2011 recorded **£1.05M**, a 75% increase vs. monthly average, ideal for **seasonal promotions**.
   
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Monthly%20Revenue%20Trend.png).
 
@@ -46,12 +49,12 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Product%20Bundles.png).
 
 ### **3. Regional Bundle Sales**
-- Shows bundle performance by country—*UK* dominates volume and revenue, while *Germany* and *Netherlands* show niche interest.
+- Shows bundle performance by country, *UK* dominates volume and revenue, while *Germany* and *Netherlands* show niche interest.
   
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Regional%20Bundle%20Sales.png).
 
 ### **4. Volume vs. Revenue**
-- Items like *World War 2 Gliders* lead in volume but not revenue. *Regency Cakestand* leads revenue despite moderate volume—supports value-based bundling.
+- Items like *World War 2 Gliders* lead in volume but not revenue. *Regency Cakestand* leads revenue despite moderate volume, supports value-based bundling.
   
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Volume%20vs.%20Revenue.png).
 
@@ -60,18 +63,10 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
   
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/RFM%20Segments.png).
 
-### **6. RFM Segment Metrics**
-- Bar chart showing each group’s size, average spend, and recency—**Champions**: £5.4K, 12-day recency; **At Risk**: £2.1K, 122-day recency.
-  
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/RFM%20Segments.png).
-
-### **7. Top 3 Products in Peak Month**
+### **6. Top 3 Products in Peak Month**
 - Horizontal bar chart showing best-sellers for November: *Rabbit Night Light*, *Paper Chain Kit*, and *Regency Cakestand*.
   
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Sheet%20Top%203%20Peak%20Month%20Products.png).
-
->  **Dashboard Summary**  
-> Interactive Tableau dashboard (linked below) unifies key metrics, filters by RFM segments, bundles, and country.
 
 ---
 
