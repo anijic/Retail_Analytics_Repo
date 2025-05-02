@@ -1,5 +1,8 @@
 # Retail Analytics: Product Bundling & Retention
 
+- Analyzing 500K+ Transactions via RFM & Market Basket Analysis to Drive Revenue Growth through Bundling & Retention Using SQL, R, and Tableau. (View the Tableau dashboard [here](https://public.tableau.com/views/RetailAnalyticsProductBundlingRetentionDashboard/RetailAnalyticsProductBundlingRetention?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
+
+![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Retail%20Analytics_%20Product%20Bundling%20%26%20Retention.png)
 
 ## **Project Goal & Context**  
 A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by **15% in 6 months** through **product bundling** and **customer retention** strategies. This project applies SQL, R, and Tableau to uncover purchasing patterns and segment customers for targeted marketing.
@@ -9,7 +12,7 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 ## **Tools & Technologies**  
 - **SQL (MySQL Workbench)** – for data cleaning and preparation  
 - **R (RStudio)** – for EDA, Market Basket Analysis, RFM segmentation  
-- **Tableau Desktop** – for building business dashboards  
+- **Tableau Desktop** – for building business dashboard  
 - **GitHub** – for documentation and version control  
 
 ---
