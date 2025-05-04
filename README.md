@@ -3,7 +3,7 @@
 - Analyzing over 500K Transactions via RFM & Market Basket Analysis to Drive Revenue Growth through Bundling & Retention Using SQL, R, and Tableau.
 
 ## **Dashboard Summary**  
-- Interactive Tableau dashboard (linked [here](https://public.tableau.com/views/RetailAnalyticsProductBundlingRetentionDashboard/RetailAnalyticsProductBundlingRetention?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  unifies key metrics, filters by RFM segments, bundles, and country.
+- Interactive Tableau dashboard (linked [here](https://public.tableau.com/views/RetailAnalyticsDashboard_17463450746120/RetailAnalyticsDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  unifies key metrics, filters by RFM segments, bundles, and country.
 
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Retail%20Analytics_%20Product%20Bundling%20%26%20Retention.png)
 
