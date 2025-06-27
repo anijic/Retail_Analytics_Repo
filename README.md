@@ -1,4 +1,4 @@
-# Retail Analytics: Product Bundling & Retention
+# Retail Analytics: Driving £350K Revenue Opportunity
 
 - Analyzing over 500K Transactions via RFM & Market Basket Analysis to Drive Revenue Growth through Bundling & Retention Using SQL, R, and Tableau.
 
