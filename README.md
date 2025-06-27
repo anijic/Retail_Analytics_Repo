@@ -1,6 +1,6 @@
 # Retail Analytics: Driving £350K Revenue Opportunity
 
-- Analyzing over 500K Transactions via RFM & Market Basket Analysis to Drive Revenue Growth through Bundling & Retention Using SQL, R, and Tableau.
+- Identified 41.5x-lift product bundles through SQL/R analysis of 540K+ transactions, enabling targeted retention strategies.
 
 ## **Dashboard Summary**  
 - Interactive Tableau dashboard (linked [here](https://public.tableau.com/views/RetailAnalyticsDashboard_17463450746120/RetailAnalyticsDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  unifies key metrics, filters by RFM segments, bundles, and country.
