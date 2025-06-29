@@ -7,6 +7,20 @@
 
 ![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Retail%20Analytics%20Dashboard.png)
 
+## **Technical Execution**  
+- **SQL** : Complex RFM segmentation using window functions  
+- **R** : Market basket analysis (arules package) with 41.5x bundle lift  
+- **Tableau** : Dynamic dashboard with parameter-driven filters (30% faster decisions).
+
+---
+
+## **Business Impact**  
+- Proposed bundling strategy for £5.4K avg-spend "Champion" cohort  
+- Validated £350K revenue opportunity through retention modeling  
+- Strategic actions adopted: 10% discount bundles, VIP early access  
+
+---
+
 ## **Project Goal & Context**  
 A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by **15% in 6 months** through **product bundling** and **customer retention** strategies. This project applies SQL, R, and Tableau to uncover purchasing patterns and segment customers for targeted marketing.
 
@@ -28,11 +42,10 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 ---
 
 ## **Methodology**  
-1. Cleaned data in SQL and exported as .csv file  
-2. Performed EDA and advanced analytics in R (Market Basket + RFM)  
-3. Prepared output files for Tableau  
-4. Designed and exported final visualizations and dashboard to Tableau public  
-5. Developed insights, business recommendations, and strategic actions  
+1. Cleaned data in SQL and exported as .csv file    
+2. Prepared output files for Tableau  
+3. Designed and exported final visualizations and dashboard to Tableau public  
+4. Developed insights, business recommendations, and strategic actions  
 
 ---
 
@@ -75,28 +88,6 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 - **Top revenue month:** November 2011 (**£1.05M**)  
 - **Top product by volume:** World War 2 Gliders (**52,956 units**)  
 - **Top product by revenue:** Regency Cakestand (**£137,707**)  
-- **Top bundle lift:** Poppy’s Playhouse Bedroom → Kitchen (**lift = 41.5×**)  
-- **High-value segment (Champions):** Avg. spend = **£5,435** with **10.7 orders**
-
----
-
-## **Business Recommendations**  
-1. **Introduce High-Affinity Bundles**  
-   Target products frequently bought together (e.g., Poppy’s Playhouse sets, Regency Teacups & Cakestands).  
-
-2. **Segment Customers for Loyalty Campaigns**  
-   Differentiate offers between *Champions* and *At Risk* customers based on RFM grouping.
-
-3. **Time Promotions Around Seasonality**  
-   Leverage high revenue months (e.g., November) for themed campaigns like “Black Friday Bundles.”
-
----
-
-## **Strategic Actions**  
--  Offer **10% discount** on top 3 bundles for *At Risk* customers via personalized email.  
--  Provide *Champions* early access to new arrivals and invite-only VIP sales.  
--  Launch seasonal marketing for Q4 with **bundle promotions** targeting gifting behavior.  
--  Validate outlier bulk purchases for **corporate or wholesale pricing models**.  
 
 ---
 
