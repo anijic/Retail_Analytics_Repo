@@ -5,7 +5,7 @@
 ## **Dashboard Summary**  
 - Interactive Tableau dashboard (linked [here](https://public.tableau.com/views/RetailAnalyticsDashboard_17463450746120/RetailAnalyticsDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  unifies key metrics, filters by RFM segments, bundles, and country.
 
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Retail%20Analytics%20Dashboard.png)
+![Alt image](https://raw.githubusercontent.com/anijic/Retail_Analytics_Repo/master/Visualizations/Retail%20Analytics%20Dashboard.png)
 
 ## **Technical Execution**  
 - **SQL** : Complex RFM segmentation using window functions  
@@ -54,32 +54,32 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 ### **1. Monthly Revenue Trend**
 - November 2011 recorded **£1.05M**, a 75% increase vs. monthly average, ideal for **seasonal promotions**.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Monthly%20Revenue%20Trend.png)
+![Alt image](https://raw.githubusercontent.com/anijic/Retail_Analytics_Repo/master/Visualizations/Monthly%20Revenue%20Trend.png)
 
 ### **2. Product Bundles (Top 5)**
 - Horizontal bar chart highlighting bundles like *Poppy’s Playhouse* and *Regency Teacup Sets* that outperform standalone products.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Product%20Bundles.png)
+![Alt image](https://raw.githubusercontent.com/anijic/Retail_Analytics_Repo/master/Visualizations/Product%20Bundles.png)
 
 ### **3. Regional Bundle Sales**
 - Shows bundle performance by country, *UK* dominates volume and revenue, while *Germany* and *Netherlands* show niche interest.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Regional%20Bundle%20Sales.png)
+![Alt image](https://raw.githubusercontent.com/anijic/Retail_Analytics_Repo/master/Visualizations/Regional%20Bundle%20Sales.png)
 
 ### **4. Volume vs. Revenue**
 - Items like *World War 2 Gliders* lead in volume but not revenue. *Regency Cakestand* leads revenue despite moderate volume, supports value-based bundling.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Volume%20vs.%20Revenue.png)
+![Alt image](https://raw.githubusercontent.com/anijic/Retail_Analytics_Repo/master/Visualizations/Volume%20vs.%20Revenue.png)
 
 ### **5. RFM Scatter Plot**
 - Segments customers into 6 groups (e.g., Champions, At Risk) using **Recency, Frequency, and Monetary** scores.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/RFM%20Segments.png)
+![Alt image](https://raw.githubusercontent.com/anijic/Retail_Analytics_Repo/master/Visualizations/RFM%20Segments.png)
 
 ### **6. Top 3 Products in Peak Month**
 - Horizontal bar chart showing best-sellers for November: *Rabbit Night Light*, *Paper Chain Kit*, and *Regency Cakestand*.
   
-![Alt image](https://github.com/anijic/Retail_Analytics_Repo/blob/master/Visualizations/Sheet%20Top%203%20Peak%20Month%20Products.png)
+![Alt image](https://raw.githubusercontent.com/anijic/Retail_Analytics_Repo/master/Visualizations/Sheet%20Top%203%20Peak%20Month%20Products.png)
 
 ---
 
