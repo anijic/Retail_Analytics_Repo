@@ -93,6 +93,7 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 
 ## **Conclusion**  
 This project demonstrates how combining product affinity analysis with customer segmentation enables **targeted pricing strategies, bundling, and retention** efforts. Visual insights and business logic directly support the retailer’s goal to grow revenue.
+The methodologies used here, RFM segmentation for customer cohort identification and market basket analysis for product affinity are directly transferable to analyzing patient readmission risk and treatment bundle effectiveness in healthcare.
 
 ---
 
