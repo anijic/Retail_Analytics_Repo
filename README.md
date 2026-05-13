@@ -1,4 +1,4 @@
-# Retail Analytics: Driving £350K Revenue Opportunity
+# Retail Analytics: Driving £350K Revenue Opportunity via RFM Segmentation & Product Bundling
 
 - Identified 41.5x-lift product bundles through SQL/R analysis of 540K+ transactions, enabling targeted retention strategies.
 
