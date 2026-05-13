@@ -1,4 +1,8 @@
 # Retail Analytics: Driving £350K Revenue Opportunity via RFM Segmentation & Product Bundling
+![SQL](https://img.shields.io/badge/SQL-336791?style=flat&logo=postgresql&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white)
+![RFM](https://img.shields.io/badge/RFM_Segmentation-£350K_Opportunity-green?style=flat)
 
 - Identified 41.5x-lift product bundles through SQL/R analysis of 540K+ transactions, enabling targeted retention strategies.
 
