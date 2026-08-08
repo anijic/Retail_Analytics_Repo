@@ -20,13 +20,13 @@
 
 ## **Business Impact**  
 - Proposed bundling strategy for £5.4K avg-spend "Champion" cohort  
-- Validated £350K revenue opportunity through retention modeling  
-- Strategic actions adopted: 10% discount bundles, VIP early access  
+- Estimated a £350K revenue opportunity from public-dataset segmentation and product-bundling analysis  
+- Illustrative strategic actions: 10% discount bundles and VIP early access  
 
 ---
 
 ## **Project Goal & Context**  
-A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by **15% in 6 months** through **product bundling** and **customer retention** strategies. This project applies SQL, R, and Tableau to uncover purchasing patterns and segment customers for targeted marketing.
+This public-data demonstration applies RFM segmentation and market-basket analysis to the UCI Online Retail dataset, which contains more than 500,000 transaction records. The objective is to show how a retail analytics workflow can identify customer segments, product-bundling opportunities, and revenue-growth hypotheses.
 
 ---
 
@@ -49,7 +49,7 @@ A mid-sized UK retailer with over 500,000 transactions aims to grow revenue by *
 1. Cleaned data in SQL and exported as .csv file    
 2. Prepared output files for Tableau  
 3. Designed and exported final visualizations and dashboard to Tableau public  
-4. Developed insights, business recommendations, and strategic actions  
+4. Translated segment and product-affinity results into illustrative retention and bundling recommendations  
 
 ---
 
