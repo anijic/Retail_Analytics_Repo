@@ -96,7 +96,7 @@ This public-data demonstration applies RFM segmentation and market-basket analys
 ---
 
 ## **Conclusion**  
-This project demonstrates how combining product affinity analysis with customer segmentation enables targeted pricing strategies, bundling, and retention efforts. Visual insights and business logic directly support the retailer's goal to grow revenue. The methodologies used here—specifically RFM segmentation for customer cohort identification and market basket analysis for product affinity—provide a scalable framework for driving data-driven growth in mid-market retail environments.
+This project demonstrates how combining product affinity analysis with customer segmentation enables targeted pricing strategies, bundling, and retention efforts. Visual insights and business logic illustrate how these methods could support revenue growth in a comparable retail business. The methodologies used here—specifically RFM segmentation for customer cohort identification and market basket analysis for product affinity—provide a scalable framework for driving data-driven growth in mid-market retail environments.
 
 ---
 
@@ -108,7 +108,7 @@ This project demonstrates how combining product affinity analysis with customer 
 #### R (RStudio)
 - Run `EDA & Advanced Analysis.Rmd` to perform EDA, Market Basket Analysis, and RFM segmentation.
 #### Tableau
-- Open `Retail Analytics_ Product Bundling & Retention Dashboard.twbx` and connect to `online_retail_viz_ready.csv`, `rfm_summary.csv` and filtered_rules.csv.
+- Open Open `Retail Analytics Dashboard.twbx` and connect to `online_retail_viz_ready.csv`, `rfm_summary.csv` and filtered_rules.csv.
 
 ---
 
